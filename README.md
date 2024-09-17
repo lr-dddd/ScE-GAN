@@ -6,6 +6,7 @@ for Semi-Supervised SAR-to-Optical Image Translation"(GRSL2024) as well as the i
 Due to the limitations of the paper's length, here we elaborate on some detailed information within the paper. This mainly includes the detailed information of the overall framework's modules, the detailed definition of the loss function, and the detailed information of the input dataset. 
 
 **framework of (a)SR block and (b)SFA block**:
+
 Supplementary to Figure 1 of the paper, the detailed expression of the framework's modules is shown in the following. 
 we adopt residual block and Transformer to design two blocks that effectively utilize scene category information, i.e., the scene-aware residual (SR) block and the scene fusion attention (SFA) block.The framework of them is shown in folowing Figure (a) and (b).
 By substituting the intermediate layer of CycleGAN’s generator with the configuration of SR × 4 + SF A × 1 + SR × 4, we derive the scene information fusion generator (SIFG) inour design.
@@ -13,12 +14,10 @@ By substituting the intermediate layer of CycleGAN’s generator with the config
 <img src='imgs/Figure.png' width="800"/>
 
 **detials of loss function**:
+
 Adversarial Loss:The adversarial loss is necessary for GAN training, and we apply the adversarial loss to two translation mappings. For the translation mapping function $G_{s2o}:SAR\rightarrow OPT$ and its discriminator $D_{OPT}$, the objective function of the mapping can be expressed as follows:
 
-$
-    L_{GAN}(G_{s2o},D_{OPT},SAR,OPT)=\mathbb{E}_{opt\sim p_{data(opt)}}[logD_{OPT}(opt)]\\
-    +\mathbb{E}_{sar\sim p_{data(sar)}}[log(1-D_{OPT}(G_{s2o}(sar)))]
-$
+<img src='imgs/adloss.png' width="800"/>
 
 where $SAR$ denotes the SAR image, $OPT$ describes the optical image, $G_{s2o}$ represents the generator that produces the optical image from the SAR image, $D_{OPT}$ denotes the discriminator of the optical image, $G_{s2o}$ tries to translate the SAR image to the optical image, and $D_{OPT}$ is used to distinguish the translation result from the real image. We introduce a similar adversarial loss for the mapping function $G_{o2s}:OPT \rightarrow SAR$, i.e., $L_{GAN}(G_{o2s},D_{SAR},OPT,SAR)$.
 
