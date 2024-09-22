@@ -2,7 +2,7 @@
 Here we provide an elaboration on the details within the paper "Scene Embedded Generative Adversarial Networks
 for Semi-Supervised SAR-to-Optical Image Translation"(GRSL2024) as well as the implementation details of the code.
 
-## Detials：
+## supplement of our paper：
 Due to the limitations of the paper's length, here we elaborate on some detailed information within the paper. This mainly includes the detailed information of the overall framework's modules, the detailed definition of the loss function, and the detailed information of the network settings. 
 
 **(1)framework of (a)SR block and (b)SFA block**:
@@ -46,3 +46,12 @@ detials of SIFG block as follow:
 detials of SAD block as follow:
 
 <img src='imgs/parad.jpg' >
+
+## Implementation details of the code：
+
+**Installation**
+please 
+
+
+
+
