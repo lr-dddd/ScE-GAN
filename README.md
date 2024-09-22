@@ -52,4 +52,4 @@ $
     \end{aligned}$
 
 
-where $D_{SAR\_cls}$ and $D_{OPT\_cls}$ represent the scene discriminators for SAR image and optical image, respectively. $sce$ represents the real scene information of the image. ${D_{SAR\_cls}}(sce|sar)$ and ${D_{OPT\_cls}}(sce|opt)$ separately represent the classification results of the optical and SAR scene discriminators for the input image.
+where $D_{SAR\_cls}$ and $D_{OPT\_cls}$ represent the scene discriminators for SAR image and optical image, respectively. $sce$ represents the real scene information of the image. ${D_{SAR\_cls}}(sce|sar)$ and ${D_{OPT\_cls}}(sce|opt)$ separately represent the classification probability distribution results of the optical and SAR scene discriminators for the input image.
