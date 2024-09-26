@@ -49,7 +49,13 @@ detials of SAD block as follow:
 
 ## Implementation details of the code：
 
+**datasets**
+
+The division of scenes is mainly based on the overall terrain and color of the images, as well as the general content contained in the images. This method of division can save labor costs and obtain a preliminary classification of a dataset. We visually discern the image scenes in different folders to get a rough classification, and then merge the same types to get the final unpaired dataset with scene information. Considering the impact of different scene data on neural networks, this chapter strives to ensure that the data in each scene is relatively balanced, and the training data has a similar distribution to the test data. Combined with the actual scene categories contained in the Sentinel-2 dataset, and according to the terrain, landforms, and colors in visible light images under different scenes, the dataset is roughly divided into seven categories: rural, mountains, urban, forest, grassland, suburban, and farmland. The detailed quantity breakdown is as follows:
+<img src='imgs/calssfication.jpg' >
+
 **Installation**
+
 please 
 
 
