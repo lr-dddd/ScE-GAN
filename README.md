@@ -56,8 +56,16 @@ The division of scenes is mainly based on the overall terrain and color of the i
 
 **Installation**
 
-please 
+Install PyTorch and 0.4+ and other dependencies (e.g., torchvision, visdom and dominate) 
+For pip users, please type the command    pip install -r requirements.txt
+For Conda users, you can create a new Conda environment using      conda env create -f environment.yml.
 
+**train**
 
+#!./scripts/train.sh
+python train.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
 
+**test**
+#!./scripts/test.sh
+python train.py
 
